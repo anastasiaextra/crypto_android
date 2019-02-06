@@ -22,16 +22,15 @@ public class MainActivity extends AppCompatActivity {
 
 
             EditText firstNumEditText = (EditText) findViewById(R.id.editText9);
-            EditText secondNumEditText = (EditText) findViewById(R.id.editText10);
+//            EditText secondNumEditText = (EditText) findViewById(R.id.editText10);
             TextView resultTextView = (TextView) findViewById(R.id.editText10);
 
             int currency1 = Integer.parseInt(firstNumEditText.getText().toString());
-            int currency2 = Integer.parseInt(secondNumEditText.getText().toString());
             int result = (int) (currency1/ 0.00029);
             resultTextView.setText(result + "");
 
 
-            Button revertBtn = (Button) findViewById(R.id.button4);
+            Button revertBtn = (Button) findViewById(R.id.button);
             revertBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -40,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
                     EditText secondNumEditText = (EditText) findViewById(R.id.editText10);
                     TextView resultTextView = (TextView) findViewById(R.id.editText9);
 
-                    int currency1 = Integer.parseInt(firstNumEditText.getText().toString());
                     int currency2 = Integer.parseInt(secondNumEditText.getText().toString());
                     int result = (int) (currency2 * 0.00029);
                     resultTextView.setText(result + "");
